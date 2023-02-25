@@ -36,5 +36,5 @@ exports.getProfile = async (req, res) => {
     const { user_id } = req.body
     const user = await UserModel.findOne({ _id: user_id })
     const { name, email } = user
-    res.send({ name, email });
+    res.send(user);
 }
